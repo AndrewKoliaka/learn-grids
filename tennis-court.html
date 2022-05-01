@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tennis court with grids</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: forestgreen;
+            height: 100vh;
+            margin: 0;
+        }
+
+        body * {
+            border: 2px solid white;
+        }
+
+        .court {
+            background-color: darkviolet;
+            display: grid;
+            height: 60vh;
+            width: 50vw;
+            grid-template-columns: 1fr 1.25fr 1.25fr 1fr;
+            grid-template-rows: 1fr 4fr 4fr 1fr;
+        }
+
+        .court__item--1 {
+            grid-column-start: 1;
+            grid-column-end: span 2;
+        }
+
+        .court__item--2 {
+            grid-column-start: 3;
+            grid-column-end: span 2;
+        }
+
+        .court__item--3 {
+            grid-row-start: 2;
+            grid-row-end: span 2;
+        }
+
+        .court__item--6 {
+            grid-row-start: 2;
+            grid-row-end: span 2;
+            grid-column-start: 4;
+        }
+
+        .court__item--7 {
+            grid-row-start: 4;
+            grid-column-start: 1;
+            grid-column-end: span 2;
+        }
+
+        .court__item--8 {
+            grid-row-start: 4;
+            grid-column-start: 3;
+            grid-column-end: span 2;
+        }
+    </style>
+</head>
+<body>
+    <main class="court">
+        <div class="court__item court__item--1"></div>
+        <div class="court__item court__item--2"></div>
+        <div class="court__item court__item--3"></div>
+        <div class="court__item"></div>
+        <div class="court__item"></div>
+        <div class="court__item"></div>
+        <div class="court__item"></div>
+        <div class="court__item court__item--6"></div>
+        <div class="court__item court__item--7"></div>
+        <div class="court__item court__item--8"></div>
+    </main>
+</body>
+</html>
